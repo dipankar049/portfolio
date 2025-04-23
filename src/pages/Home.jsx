@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 const Home = () => {
   return (
     <>
-      <Router>
+      <Router basename="/portfolio/">
         <div className='flex flex-col min-h-screen px-12 bg-gradient-to-br from-gray-50 to-blue-50'>
           <Header />
           <Routes>
