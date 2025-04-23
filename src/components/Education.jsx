@@ -1,0 +1,37 @@
+// src/components/Education.jsx
+import React from 'react';
+
+const Education = () => {
+  return (
+    <section className="my-10 px-4 md:px-12">
+      <h2 className="text-4xl font-bold text-center text-blue-700 mb-10 animate-fade-in">Education</h2>
+      <div className="space-y-10">
+        {/* B.Tech */}
+        <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 className="text-2xl font-semibold text-blue-600">B.Tech, Computer Science & Engineering</h3>
+          <p className="text-sm text-gray-500">The Neotia University & NITMAS</p>
+          <p className="text-sm text-gray-400">2021 - 2025</p>
+          <p className="text-gray-700 mt-2">CGPA: <span className="font-medium">8.59/10</span></p>
+        </div>
+
+        {/* Higher Secondary */}
+        <div className="bg-gradient-to-r from-gray-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 className="text-2xl font-semibold text-blue-600">Senior Secondary (XII), Science</h3>
+          <p className="text-sm text-gray-500">Sundarban Adarsha Vidyamandir</p>
+          <p className="text-sm text-gray-400">WBCHSE • Completed: 2021</p>
+          <p className="text-gray-700 mt-2">Percentage: <span className="font-medium">83.80%</span></p>
+        </div>
+
+        {/* Secondary */}
+        <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <h3 className="text-2xl font-semibold text-blue-600">Secondary (X)</h3>
+          <p className="text-sm text-gray-500">Mahendraganj High School</p>
+          <p className="text-sm text-gray-400">WBBSE • Completed: 2019</p>
+          <p className="text-gray-700 mt-2">Percentage: <span className="font-medium">84.70%</span></p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Education;
