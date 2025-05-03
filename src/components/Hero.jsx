@@ -26,7 +26,7 @@ const Hero = () => {
           </p>
           <div className="flex gap-4 justify-center md:justify-start">
             <a
-              href="/portfolio/Resume_Dipankar_Karan.pdf"
+              href="/Resume_Dipankar_Karan.pdf"
               download
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
             >
