@@ -12,16 +12,18 @@ const Home = () => {
   return (
     <>
       <Router>
-        <div className='flex flex-col min-h-screen px-12 bg-gradient-to-br from-gray-50 to-blue-50'>
+        <div className='min-h-dvh flex flex-col bg-gradient-to-br from-gray-50 to-blue-50'>
           <Header />
-          <Routes>
-            <Route path="/" element={<Hero />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/education" element={<Education />} />
-          </Routes>
+          <div className='my-14 py-4 px-[5vw] grow'>
+            <Routes>
+              <Route path="/" element={<Hero />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/education" element={<Education />} />
+            </Routes>
+          </div>
           <Footer />
         </div>
       </Router>

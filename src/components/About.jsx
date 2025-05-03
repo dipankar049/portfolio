@@ -1,8 +1,8 @@
 const About = () => {
   return (
-    <div className="flex items-center justify-center min-h-[calc(100vh-9rem)] bg-gradient-to-br from-blue-50 to-white px-6 mx-20 rounded-xl shadow-md">
+    <div className="flex items-center justify-center min-h-[calc(100vh-11rem)] bg-gradient-to-br from-blue-50 to-white px-6 my-4 sm:my-10 rounded-xl shadow-md">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-6 animate-fade-in">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-6 sm:mb-10 animate-fade-in">
           About Me
         </h2>
         <p className="text-gray-700 text-md md:text-lg leading-loose backdrop-blur-sm">

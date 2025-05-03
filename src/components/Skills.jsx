@@ -32,9 +32,9 @@ const Skills = () => {
   };
 
   return (
-    <section className="w-full py-16 px-6">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-10">Skills</h2>
+    <section className="w-full py-4 sm:my-10 px-6 min-h-[calc(100vh-11rem)]">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-6 sm:mb-10">Skills</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {Object.entries(skillCategories).map(([category, skills]) => (
             <div key={category} className="bg-white shadow-md rounded-xl p-6">

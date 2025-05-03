@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'; // Import soc
 
 const Footer = () => {
   return (
-    <div className="w-full mt-auto py-4">
+    <div className="w-full fixed bottom-0 py-4">
       <div className="flex justify-center space-x-6">
         <a href="https://github.com/dipankar049" target="_blank" rel="noopener noreferrer">
           <FaGithub className="text-2xl hover:text-gray-400" />

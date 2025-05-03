@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <div className="flex items-center justify-center min-h-[calc(100vh-9rem)] px-4">
+    <div className="flex items-center pt-4 justify-center min-h-[calc(100vh-11rem)] px-4">
       <div className="flex flex-col md:flex-row-reverse items-center gap-10 max-w-5xl w-full">
         
       <div className="flex-shrink-0">
@@ -15,7 +15,7 @@ const Hero = () => {
       </div>
         {/* Text Content */}
         <div className="text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             Hi, I’m <span className="text-blue-600">Dipankar</span>
           </h1>
           <p className="text-xl text-gray-600 mb-2">

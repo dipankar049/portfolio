@@ -2,14 +2,14 @@ import React from 'react';
 
 const Experience = () => {
   return (
-    <section className="my-20 px-4 md:px-12">
-      <h2 className="text-4xl font-bold text-center text-blue-700 mb-10 animate-fade-in">Experience</h2>
+    <section className="my-4 sm:my-10 px-4 md:px-12 min-h-[calc(100vh-11rem)]">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-6 sm:mb-10 animate-fade-in">Experience</h2>
       <div className="space-y-10">
         {/* Unified Mentor */}
         <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="md:w-1/3">
-              <h3 className="text-2xl font-semibold text-blue-600">MERN Stack Developer Intern</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-blue-600">MERN Stack Developer Intern</h3>
               <p className="text-sm text-gray-500">Unified Mentor</p>
               <p className="text-sm text-gray-400">Jan 2025 - Present</p>
             </div>
@@ -26,7 +26,7 @@ const Experience = () => {
         <div className="bg-gradient-to-r from-gray-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="md:w-1/3">
-              <h3 className="text-2xl font-semibold text-blue-600">React Developer Intern</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-blue-600">React Developer Intern</h3>
               <p className="text-sm text-gray-500">Think Again Lab</p>
               <p className="text-sm text-gray-400">Aug 2024 - Oct 2024</p>
             </div>

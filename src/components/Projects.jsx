@@ -7,22 +7,22 @@ const Projects = () => {
   const projects = [
     {
       title: "DSA Simulator",
-      description: "A platform to learn and visualize DSA algorithms.",
+      description: "A platform to visualize DSA algorithms like array and linked list operations, and various sorting and searching algorithms, with step-by-step animations.",
       tech: ["React", "JavaScript", "Tailwind", "CSS"],
       liveLink: "https://dsa-simulator-three.vercel.app/",
       imageUrl: DSAImage,
     },
     {
       title: "MultiVendor E-Commerce System",
-      description: "A full-featured multivendor e-commerce platform with vendor dashboards, product listings, and order management. Built using React, Node.js, MongoDB, and Tailwind CSS for a modern, responsive UI.",
+      description: "A multivendor e-commerce platform with vendor dashboards, product listings, and order management. Built using React, Node.js, MongoDB, and Tailwind CSS.",
       tech: ["React", "Node.js", "MySQL", "Tailwind"],
       gitHubRepo: "https://github.com/dipankar049/Multivendor-Ecommerce-System",
       imageUrl: ECommerceImage,
     },
     {
       title: "Task Tracker Lite",
-      description: "A multivendor e-commerce platform with product management and vendor dashboards, built with React, Node.js, and MongoDB.",
-      tech: ["React", "Node.js", "Express.js", "MongoDB Atlas", "Tailwind"],
+      description: "A task tracker app allowing users to manage projects with features like signup, login, task creation, updating, and deletion. Built using React, Node.js, MongoDB, and Tailwind CSS.",
+      tech: ["React", "Node.js", "MongoDB", "Tailwind"],
       liveLink: "https://task-tracker-lite.vercel.app/",
       gitHubRepo: "https://github.com/dipankar049/task-tracker-lite",
       imageUrl: taskTrackerLiteImage,
@@ -38,8 +38,8 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects-section" className="my-16 px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-blue-700 text-center mb-8">Projects</h2>
+    <section id="projects-section" className="my-4 sm:my-10 px-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-blue-700 text-center mb-6 sm:mb-10">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -49,7 +49,7 @@ const Projects = () => {
               <p className="text-gray-700 mt-2">{project.description}</p>
               <div className="mt-3">
                 {project.tech.map((tech, index) => (
-                  <span key={index} className="inline-block text-sm bg-gray-200 text-gray-800 py-1 px-2 rounded-full mr-2">
+                  <span key={index} className="inline-block text-sm bg-gray-200 text-gray-800 py-1 px-2 rounded-full mr-2 mt-1">
                     {tech}
                   </span>
                 ))}
