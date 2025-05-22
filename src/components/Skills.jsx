@@ -1,4 +1,3 @@
-// src/components/Skills.jsx
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaJava } from 'react-icons/fa';
 import { SiTailwindcss, SiBootstrap, SiMongodb, SiMysql, SiExpress, SiPython, SiC } from 'react-icons/si';
 import SiVSCode from "../assets/vscode.svg";

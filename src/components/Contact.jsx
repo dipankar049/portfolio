@@ -1,4 +1,3 @@
-// src/components/Contact.jsx
 import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
@@ -21,7 +20,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send data to a backend or email service)
     setIsSubmitted(true);
   };
 

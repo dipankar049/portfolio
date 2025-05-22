@@ -8,7 +8,7 @@ const Hero = () => {
         
       <div className="flex-shrink-0">
         <img
-          src={avatar} // Make sure the avatar path is correct
+          src={avatar}
           alt="Dipankar Avatar"
           className="w-52 h-52 md:w-64 md:h-64 rounded-full shadow-lg object-contain bg-white pt-4"
         />

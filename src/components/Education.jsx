@@ -1,4 +1,3 @@
-// src/components/Education.jsx
 import React from 'react';
 
 const Education = () => {

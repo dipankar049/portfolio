@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X } from 'lucide-react'; // Install lucide-react or use any icons
+import { Menu, X } from 'lucide-react';
 
 const navLinkClass = ({ isActive }) =>
   isActive

@@ -34,7 +34,6 @@ const Projects = () => {
       gitHubRepo: "https://github.com/dipankar049/TaskTrackr",
       imageUrl: TaskTrackerImage,
     }
-    // Add more projects here
   ];
 
   return (
