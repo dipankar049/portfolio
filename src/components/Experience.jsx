@@ -11,7 +11,7 @@ const Experience = () => {
             <div className="md:w-1/3">
               <h3 className="text-xl md:text-2xl font-semibold text-blue-600">MERN Stack Developer Intern</h3>
               <p className="text-sm text-gray-500">Unified Mentor</p>
-              <p className="text-sm text-gray-400">Jan 2025 - Present</p>
+              <p className="text-sm text-gray-400">Jan 2025 - Jun 2025</p>
             </div>
             <div className="md:w-2/3">
               <p className="text-gray-700 text-md">

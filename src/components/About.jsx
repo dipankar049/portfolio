@@ -9,7 +9,7 @@ const About = () => {
           👋 Hi! I’m <span className="font-semibold text-blue-600">Dipankar</span>, a final year Computer Science student from West Bengal. I’m passionate about
           building responsive and accessible web applications and exploring real-world problem solving through code.
           <br /><br />
-          💻 Tech I'm familiar with includes <span className="font-medium">React, Node.js, Express, MongoDB</span>, and
+          💻 Tech I'm familiar with includes <span className="font-medium">React, Tailwind CSS, Node.js, Express, MySQL</span>, and
           I also love creating cross-platform apps using <span className="font-medium">Flutter</span>.
           <br /><br />
           🚀 When I’m not building projects, I sharpen my problem-solving skills on platforms like
