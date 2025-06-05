@@ -10,6 +10,7 @@ const Projects = () => {
       description: "A platform to visualize DSA algorithms like array and linked list operations, and various sorting and searching algorithms, with step-by-step animations.",
       tech: ["React", "JavaScript", "Tailwind", "CSS"],
       liveLink: "https://dsa-simulator-three.vercel.app/",
+      gitHubRepo: "https://github.com/dipankar049/dsa-simulator",
       imageUrl: DSAImage,
     },
     {
@@ -33,6 +34,7 @@ const Projects = () => {
       tech: ["Flutter", "Dart", "sqflite"],
       gitHubRepo: "https://github.com/dipankar049/TaskTrackr",
       imageUrl: TaskTrackerImage,
+      downloadAPK: "https://drive.google.com/uc?export=download&id=1vPsnV1c7Qe1yRrCBWU-HrLeQrTZXrUCF"
     }
   ];
 
@@ -64,6 +66,15 @@ const Projects = () => {
                     className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
                   >
                     Live Demo
+                  </a>
+                )}
+                {project.downloadAPK && (
+                  <a
+                    href={project.downloadAPK}
+                    download
+                    className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
+                  >
+                    📱 Download Android App
                   </a>
                 )}
                 {project.gitHubRepo && (
