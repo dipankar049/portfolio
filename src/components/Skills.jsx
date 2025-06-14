@@ -1,5 +1,5 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaJava } from 'react-icons/fa';
-import { SiTailwindcss, SiBootstrap, SiMongodb, SiMysql, SiExpress, SiPython, SiC } from 'react-icons/si';
+import { SiTailwindcss, SiBootstrap, SiMongodb, SiMysql, SiExpress, SiC } from 'react-icons/si';
 import SiVSCode from "../assets/vscode.svg";
 
 const iconMap = {
@@ -15,7 +15,6 @@ const iconMap = {
   MongoDB: <SiMongodb className="text-green-500" />,
   C: <SiC className="text-blue-500" />,
   Java: <FaJava className="text-red-600" />,
-  Python: <SiPython className="text-yellow-600" />,
   Git: <FaGitAlt className="text-red-500" />,
   GitHub: <FaGitAlt className="text-gray-800" />,
   "VS Code": <img src={SiVSCode} alt="VS Code" className="w-4 h-4" />,
@@ -26,7 +25,7 @@ const Skills = () => {
     "Frontend": ["React", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Bootstrap"],
     "Backend": ["Node.js", "Express.js"],
     "Database": ["MySQL", "MongoDB"],
-    "Programming": ["Java", "JavaScript", "C", "Python"],
+    "Programming": ["Java", "JavaScript", "C"],
     "Tools": ["Git", "GitHub", "VS Code"]
   };
 
