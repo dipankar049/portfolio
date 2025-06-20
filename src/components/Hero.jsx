@@ -28,13 +28,13 @@ const Hero = () => {
             <a
               href="/Resume_Dipankar_Karan.pdf"
               download
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 hover:scale-110 transition duration-400 ease-in-out"
             >
               Download Resume
             </a>
             <Link
               to="/projects"
-              className="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-100 transition"
+              className="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-100 hover:scale-110 transition duration-400 ease-in-out"
             >
               View Projects
             </Link>

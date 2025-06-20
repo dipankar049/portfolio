@@ -6,15 +6,15 @@ const Education = () => {
       <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-6 sm:mb-10 animate-fade-in">Education</h2>
       <div className="space-y-10">
         {/* B.Tech */}
-        <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+        <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out cursor-pointer">
           <h3 className="text-xl md:text-2xl font-semibold text-blue-600">B.Tech, Computer Science & Engineering</h3>
-          <p className="text-sm text-gray-500">The Neotia University & NITMAS</p>
+          <p className="text-sm text-gray-500">The Neotia University</p>
           <p className="text-sm text-gray-400">2021 - 2025</p>
           <p className="text-gray-700 mt-2">CGPA: <span className="font-medium">8.59/10</span></p>
         </div>
 
         {/* Higher Secondary */}
-        <div className="bg-gradient-to-r from-gray-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+        <div className="bg-gradient-to-r from-gray-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out cursor-pointer">
           <h3 className="text-xl md:text-2xl font-semibold text-blue-600">Senior Secondary (XII), Science</h3>
           <p className="text-sm text-gray-500">Sundarban Adarsha Vidyamandir</p>
           <p className="text-sm text-gray-400">WBCHSE • Completed: 2021</p>
@@ -22,7 +22,7 @@ const Education = () => {
         </div>
 
         {/* Secondary */}
-        <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+        <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out cursor-pointer">
           <h3 className="text-xl md:text-2xl font-semibold text-blue-600">Secondary (X)</h3>
           <p className="text-sm text-gray-500">Mahendraganj High School</p>
           <p className="text-sm text-gray-400">WBBSE • Completed: 2019</p>

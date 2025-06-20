@@ -4,8 +4,8 @@ import { Menu, X } from 'lucide-react';
 
 const navLinkClass = ({ isActive }) =>
   isActive
-    ? 'border-b-2 border-blue-600 text-blue-600'
-    : 'hover:text-blue-500 transition duration-200';
+    ? 'border-b-2 border-blue-600 text-blue-600 hover:scale-110 transition duration-200'
+    : 'hover:text-blue-500 hover:scale-110 transition duration-200';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function Header() {
     <header className='fixed top-0 left-0 w-full z-50 bg-gradient-to-br from-gray-50 to-blue-50 shadow-md'>
       <div className='flex items-center justify-between px-4 py-4 sm:px-6 md:px-8'>
         {/* Logo */}
-        <NavLink to='/' className='text-md sm:text-xl font-bold'>
+        <NavLink to='/' className='text-md sm:text-xl font-bold hover:scale-105 transition duration-200'>
           dipankar049
         </NavLink>
 
