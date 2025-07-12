@@ -18,10 +18,10 @@ const Hero = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             Hi, I’m <span className="text-blue-600">Dipankar</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-2">
+          <p className="text-xl sm:text-2xl text-gray-600 mb-2">
             Final Year CSE Student | MERN Stack Developer | Problem Solver
           </p>
-          <p className="text-md text-gray-500 mb-6">
+          <p className="text-md sm:text-lg text-gray-500 mb-6">
             I love building web and mobile apps that solve real-world problems and improve user experiences.
           </p>
           <div className="flex gap-4 justify-center md:justify-start">

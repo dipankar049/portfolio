@@ -1,10 +1,10 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaJava } from 'react-icons/fa';
-import { SiTailwindcss, SiBootstrap, SiMongodb, SiMysql, SiExpress, SiC } from 'react-icons/si';
+import { SiTailwindcss, SiBootstrap, SiMongodb, SiMysql, SiExpress, SiGit, SiGithub, SiVercel, SiFirebase, SiPython } from 'react-icons/si';
 import SiVSCode from "../assets/vscode.svg";
 
 const iconMap = {
-  HTML: <FaHtml5 className="text-orange-600" />,
-  CSS: <FaCss3Alt className="text-blue-600" />,
+  HTML5: <FaHtml5 className="text-orange-600" />,
+  CSS3: <FaCss3Alt className="text-blue-600" />,
   JavaScript: <FaJs className="text-yellow-500" />,
   React: <FaReact className="text-cyan-500" />,
   "Tailwind CSS": <SiTailwindcss className="text-sky-400" />,
@@ -13,20 +13,22 @@ const iconMap = {
   "Express.js": <SiExpress className="text-gray-800" />,
   MySQL: <SiMysql className="text-blue-700" />,
   MongoDB: <SiMongodb className="text-green-500" />,
-  C: <SiC className="text-blue-500" />,
+  Python: <SiPython className="text-blue-500" />,
   Java: <FaJava className="text-red-600" />,
-  Git: <FaGitAlt className="text-red-500" />,
-  GitHub: <FaGitAlt className="text-gray-800" />,
+  Git: <SiGit className="text-orange-500" />,
+  GitHub: <SiGithub className="text-gray-800" />,
+  Firebase: <SiFirebase  className='text-yellow-500'/>,
+  Vercel: <SiVercel/>,
   "VS Code": <img src={SiVSCode} alt="VS Code" className="w-4 h-4" />,
 };
 
 const Skills = () => {
   const skillCategories = {
-    "Frontend": ["React", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Bootstrap"],
-    "Backend": ["Node.js", "Express.js"],
+    "Frontend": ["React", "HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
+    "Backend": ["Node.js", "Express.js", "Firebase"],
     "Database": ["MySQL", "MongoDB"],
-    "Programming": ["Java", "JavaScript", "C"],
-    "Tools": ["Git", "GitHub", "VS Code"]
+    "Programming": ["Java", "JavaScript", "Python"],
+    "Tools": ["Git", "GitHub", "VS Code", "Vercel"]
   };
 
   return (

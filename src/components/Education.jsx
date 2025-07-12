@@ -15,7 +15,7 @@ const Education = () => {
 
         {/* Higher Secondary */}
         <div className="bg-gradient-to-r from-gray-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out cursor-pointer">
-          <h3 className="text-xl md:text-2xl font-semibold text-blue-600">Senior Secondary (XII), Science</h3>
+          <h3 className="text-xl md:text-2xl font-semibold text-blue-600">Higher Secondary Education (XII), Science</h3>
           <p className="text-sm text-gray-500">Sundarban Adarsha Vidyamandir</p>
           <p className="text-sm text-gray-400">WBCHSE • Completed: 2021</p>
           <p className="text-gray-700 mt-2">Percentage: <span className="font-medium">83.80%</span></p>
@@ -23,7 +23,7 @@ const Education = () => {
 
         {/* Secondary */}
         <div className="bg-gradient-to-r from-blue-50 to-white p-6 rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out cursor-pointer">
-          <h3 className="text-xl md:text-2xl font-semibold text-blue-600">Secondary (X)</h3>
+          <h3 className="text-xl md:text-2xl font-semibold text-blue-600">Secondary Education (X)</h3>
           <p className="text-sm text-gray-500">Mahendraganj High School</p>
           <p className="text-sm text-gray-400">WBBSE • Completed: 2019</p>
           <p className="text-gray-700 mt-2">Percentage: <span className="font-medium">84.70%</span></p>
