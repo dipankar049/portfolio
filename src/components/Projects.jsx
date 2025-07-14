@@ -17,7 +17,7 @@ const Projects = () => {
       title: "MultiVendor E-Commerce System",
       description: "A multivendor e-commerce platform with vendor dashboards, product listings, and order management. Built using React, Node.js, MongoDB, and Tailwind CSS.",
       tech: ["React", "Node.js", "MySQL", "Tailwind"],
-      gitHubRepo: "https://github.com/dipankar049/Multivendor-Ecommerce-System",
+      gitHubRepo: "https://github.com/Prompt-Driven-Engineers/Inventory-Order-Management-System",
       imageUrl: ECommerceImage,
     },
     {
@@ -44,7 +44,7 @@ const Projects = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-300 ease-in">
-            <img src={project.imageUrl} alt={project.title} className="w-full h-50 object-cover object-center" />
+            <img src={project.imageUrl} alt={project.title} className="w-full aspect-4/2 object-center" />
             <div className="p-4">
               <h3 className="text-xl font-semibold">{project.title}</h3>
               <p className="text-gray-700 mt-2">{project.description}</p>
