@@ -1,32 +1,48 @@
-import About from '../components/About';
-import Education from '../components/Education';
-import Experience from '../components/Experience';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import Projects from '../components/Projects';
-import Skills from '../components/Skills';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import avatar from '../assets/avatar.jpg';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <>
-      <Router>
-        <div className='min-h-dvh flex flex-col bg-gradient-to-br from-gray-50 to-blue-50'>
-          <Header />
-          <div className='my-14 py-4 px-[5vw] grow'>
-            <Routes>
-              <Route path="/" element={<Hero />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/skills" element={<Skills />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/education" element={<Education />} />
-            </Routes>
+      <div className="flex items-center pt-4 justify-center min-h-[calc(100vh-11rem)] px-4">
+      <div className="flex flex-col md:flex-row-reverse items-center gap-10 max-w-5xl w-full">
+        
+      <div className="flex-shrink-0">
+        <img
+          src={avatar}
+          alt="Dipankar Avatar"
+          className="w-52 h-52 md:w-64 md:h-64 rounded-full shadow-lg object-contain bg-white dark:bg-gray-500 pt-4"
+        />
+      </div>
+        {/* Text Content */}
+        <div className="text-center md:text-left text-gray-600 dark:text-gray-200">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+            Hi, I’m <span className="text-blue-600">Dipankar</span>
+          </h1>
+          <p className="text-xl sm:text-2xl dark:text-gray-300 mb-2">
+            Final Year CSE Student | MERN Stack Developer | Problem Solver
+          </p>
+          <p className="text-md sm:text-lg dark:text-gray-400 mb-6">
+            I love building web and mobile apps that solve real-world problems and improve user experiences.
+          </p>
+          <div className="flex gap-4 justify-center md:justify-start">
+            <a
+              href="/Resume_Dipankar_Karan.pdf"
+              download
+              className="bg-blue-600 dark:bg-gray-800 dark:border dark:border-gray-200 text-white px-3 sm:px-6 py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-gray-800 hover:scale-110 transition duration-400 ease-in-out"
+            >
+              Download Resume
+            </a>
+            <Link
+              to="/projects"
+              className="dark:bg-gray-800 border border-blue-600 dark:border-gray-200 text-blue-600 dark:text-gray-200 px-3 sm:px-6 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 hover:scale-110 transition duration-400 ease-in-out"
+            >
+              View Projects
+            </Link>
           </div>
-          <Footer />
         </div>
-      </Router>
+      </div>
+    </div>
     </>
   );
 };

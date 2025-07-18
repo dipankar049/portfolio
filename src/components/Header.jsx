@@ -11,7 +11,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className='fixed top-0 left-0 w-full z-50 bg-gradient-to-br from-gray-50 to-blue-50 shadow-md'>
+    <header className='fixed top-0 left-0 w-full z-50 bg-blue-50 dark:bg-gray-800 dark:text-gray-300 shadow-md'>
       <div className='flex items-center justify-between px-4 py-4 sm:px-6 md:px-8'>
         {/* Logo */}
         <NavLink to='/' className='text-md sm:text-xl font-bold hover:scale-105 transition duration-200'>
