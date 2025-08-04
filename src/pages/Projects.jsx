@@ -40,17 +40,17 @@ const Projects = () => {
 
   return (
     <section id="projects-section" className="my-4 sm:my-10 px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-blue-600 text-center mb-6 sm:mb-10">Projects</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-shadow-lg/30 text-blue-600 text-center mb-6 sm:mb-10">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div key={index} className="bg-white dark:bg-gray-800 dark:text-gray-200 shadow-lg rounded-lg overflow-hidden hover:scale-105 transition duration-300 ease-in">
             <img src={project.imageUrl} alt={project.title} className="w-full aspect-4/2 object-center" />
             <div className="p-4">
-              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <h3 className="text-xl text-blue-400 text-shadow-lg/30 font-semibold">{project.title}</h3>
               <p className="text-gray-700 dark:text-gray-200 mt-2">{project.description}</p>
               <div className="mt-3">
                 {project.tech.map((tech, index) => (
-                  <span key={index} className="inline-block text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full mr-2 mt-1">
+                  <span key={index} className="inline-block shadow-lg text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full mr-2 mt-1">
                     {tech}
                   </span>
                 ))}
@@ -63,7 +63,7 @@ const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-1 sm:py-2 rounded-md cursor-pointer"
+                    className="text-white shadow-lg bg-blue-600 hover:bg-blue-700 px-4 py-1 sm:py-2 rounded-md cursor-pointer"
                   >
                     Live Demo
                   </a>
