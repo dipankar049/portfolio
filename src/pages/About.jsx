@@ -6,15 +6,32 @@ const About = () => {
           About Me
         </h2>
         <p className="text-gray-700 dark:text-gray-200 text-md md:text-lg leading-loose backdrop-blur-sm">
-          👋 Hi! I’m <span className="font-semibold text-blue-600">Dipankar</span>, a final year Computer Science student from West Bengal. I’m passionate about
+          👋 Hi! I’m <span className="font-semibold text-blue-600">Dipankar</span>, a Computer Science graduate from West Bengal. I’m passionate about
           building responsive and accessible web applications and exploring real-world problem solving through code.
           <br /><br />
-          💻 Tech I'm familiar with includes <span className="font-medium">React, Tailwind CSS, Node.js, Express, MySQL</span>, and
+          💻 Tech I'm familiar with includes <span className="font-medium">React, Tailwind CSS, Node.js, Express, MongoDB</span>, and
           I also love creating cross-platform apps using <span className="font-medium">Flutter</span>.
           <br /><br />
           🚀 When I’m not building projects, I sharpen my problem-solving skills on platforms like
-          <span className="font-medium"> LeetCode </span> and <span className="font-medium"> HackerRank</span>.
+          <a
+            href="https://leetcode.com/Dipankar_Karan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-blue-600 hover:text-blue-800 transition px-1"
+          >
+            LeetCode
+          </a>
+          and
+          <a
+            href="https://www.hackerrank.com/dipb7266"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-blue-600 hover:text-blue-800 transition px-1"
+          >
+            HackerRank
+          </a>.
         </p>
+
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ const Home = () => {
             Hi, I’m <span className="text-blue-600">Dipankar</span>
           </h1>
           <p className="text-xl sm:text-2xl dark:text-gray-300 mb-2">
-            Final Year CSE Student | MERN Stack Developer | Problem Solver
+            B.Tech in Computer Science | MERN Stack Developer | Problem Solver
           </p>
           <p className="text-md sm:text-lg dark:text-gray-400 mb-6">
             I love building web and mobile apps that solve real-world problems and improve user experiences.
