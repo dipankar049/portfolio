@@ -7,16 +7,16 @@ const Home = () => {
       <div className="flex items-center pt-4 justify-center min-h-[calc(100vh-11rem)] px-4">
       <div className="flex flex-col md:flex-row-reverse items-center gap-10 max-w-5xl w-full">
         
-      <div className="flex-shrink-0 rounded-full shadow-xl">
+      <div className="flex-shrink-0 rounded-full shadow-xl/30">
         <img
           src={avatar}
           alt="Dipankar Avatar"
-          className="w-52 h-52 md:w-64 md:h-64 rounded-full shadow-lg object-contain bg-white dark:bg-gray-500 pt-4"
+          className="w-48 h-48 md:w-64 md:h-64 rounded-full object-contain bg-white dark:bg-gray-500 pt-4"
         />
       </div>
         {/* Text Content */}
         <div className="text-center md:text-left text-gray-600 dark:text-gray-200">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl text-shadow-lg/30 font-bold text-gray-800 dark:text-gray-200 mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-shadow-lg/50 font-bold text-gray-800 dark:text-gray-200 mb-4">
             Hi, I’m <span className="text-blue-600">Dipankar</span>
           </h1>
           <p className="text-xl text-shadow-lg/30 sm:text-2xl dark:text-gray-300 mb-2">
@@ -29,13 +29,13 @@ const Home = () => {
             <a
               href="/Resume_Dipankar_Karan.pdf"
               download
-              className="bg-blue-600 shadow-2xl dark:bg-gray-800 dark:border dark:border-gray-200 text-white px-3 sm:px-6 py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-gray-800 hover:scale-110 transition duration-400 ease-in-out"
+              className="bg-blue-600 shadow-xl/30 dark:bg-gray-800 dark:border dark:border-gray-200 text-white px-3 sm:px-6 py-2 rounded-lg hover:bg-blue-700 dark:hover:bg-gray-800 hover:scale-110 transition duration-400 ease-in-out"
             >
               Download Resume
             </a>
             <Link
               to="/projects"
-              className="dark:bg-gray-800 shadow-2xl border border-blue-600 dark:border-gray-200 text-blue-600 dark:text-gray-200 px-3 sm:px-6 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 hover:scale-110 transition duration-400 ease-in-out"
+              className="dark:bg-gray-800 shadow-xl/30 border border-blue-600 dark:border-gray-200 text-blue-600 dark:text-gray-200 px-3 sm:px-6 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 hover:scale-110 transition duration-400 ease-in-out"
             >
               View Projects
             </Link>

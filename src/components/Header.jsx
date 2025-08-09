@@ -4,23 +4,23 @@ import { Menu, X } from 'lucide-react';
 
 const navLinkClass = ({ isActive }) =>
   isActive
-    ? 'border-b-2 text-shadow-lg/30 border-blue-600 text-blue-600 hover:scale-110 transition duration-200'
-    : 'hover:text-blue-500 text-shadow-lg/30 hover:scale-110 transition duration-200';
+    ? 'border-b-2 text-shadow-lg/50 border-blue-600 text-blue-600 hover:scale-110 transition duration-200'
+    : 'hover:text-blue-500 text-shadow-lg/50 hover:scale-110 transition duration-200';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className='fixed top-0 left-0 w-full z-50 bg-blue-50 dark:bg-gray-800 dark:text-gray-300 shadow-xl'>
+    <header className='fixed top-0 left-0 w-full z-50 bg-blue-50 dark:bg-gray-800 shadow-lg/30 dark:text-gray-300'>
       <div className='flex items-center justify-between px-4 py-4 sm:px-6 md:px-8'>
         {/* Logo */}
-        <NavLink to='/' className='text-md sm:text-xl text-shadow-lg/30 font-bold hover:scale-105 transition duration-200'>
+        <NavLink to='/' className='text-md sm:text-xl text-shadow-lg/50 font-bold hover:scale-105 transition duration-200'>
           dipankar049
         </NavLink>
 
         {/* Hamburger button - hidden on sm and up */}
         <button
-          className='sm:hidden text-blue-700 text-2xl'
+          className='sm:hidden text-blue-700 text-2xl text-shadow-lg/50'
           onClick={() => setMenuOpen(prev => !prev)}
           aria-label='Toggle navigation'
         >
