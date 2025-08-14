@@ -2,28 +2,37 @@ import DSAImage from '../assets/DSA.jpg';
 import ECommerceImage from '../assets/ecommerce.webp';
 import TaskTrackerImage from '../assets/taskTracker.png';
 import taskTrackerLiteImage from '../assets/task-tracker-lite.png';
+import HabitTrackerImage from '../assets/HabitTracker.png';
 
 const Projects = () => {
   const projects = [
     {
       title: "DSA Simulator",
       description: "A platform to visualize DSA algorithms like array and linked list operations, and various sorting and searching algorithms, with step-by-step animations.",
-      tech: ["React", "JavaScript", "Tailwind", "CSS"],
+      tech: ["React", "JavaScript", "Tailwind", "CSS3", "Routing"],
       liveLink: "https://dsa-simulator-three.vercel.app/",
       gitHubRepo: "https://github.com/dipankar049/dsa-simulator",
       imageUrl: DSAImage,
     },
     {
+      title: "Habit Tracker",
+      description: "An application that help users to form and maintain habits. Users can set routines, add events in calendar, log time spent, and view weekly, monthly summaries to track progress.",
+      tech: ["React", "Tailwind", "Express.js", "MongoDB", "JWT", "Recharts", "React Big Calendar"],
+      liveLink: "https://habit-tracker-wx7h.vercel.app/",
+      gitHubRepo: "https://github.com/dipankar049/habit-tracker",
+      imageUrl: HabitTrackerImage,
+    },
+    {
       title: "MultiVendor E-Commerce System",
       description: "A multivendor e-commerce platform with vendor dashboards, product listings, and order management. Built using React, Node.js, MongoDB, and Tailwind CSS.",
-      tech: ["React", "Node.js", "MySQL", "Tailwind"],
+      tech: ["React", "Tailwind CSS", "Node.js", "MySQL", "JWT", "React Router"],
       gitHubRepo: "https://github.com/Prompt-Driven-Engineers/Inventory-Order-Management-System",
       imageUrl: ECommerceImage,
     },
     {
       title: "Task Tracker Lite",
       description: "A task tracker app allowing users to manage projects with features like signup, login, task creation, updating, and deletion. Built using React, Node.js, MongoDB, and Tailwind CSS.",
-      tech: ["React", "Node.js", "MongoDB", "Tailwind"],
+      tech: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
       liveLink: "https://task-tracker-lite.vercel.app/",
       gitHubRepo: "https://github.com/dipankar049/task-tracker-lite",
       imageUrl: taskTrackerLiteImage,
@@ -48,9 +57,9 @@ const Projects = () => {
             <div className="p-4">
               <h3 className="text-xl text-blue-400 text-shadow-lg/50 font-semibold">{project.title}</h3>
               <p className="text-gray-700 dark:text-gray-400 text-shadow-lg/20 mt-2">{project.description}</p>
-              <div className="mt-3">
+              <div className="mt-1">
                 {project.tech.map((tech, index) => (
-                  <span key={index} className="inline-block shadow-lg/20 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full mr-2 mt-1">
+                  <span key={index} className="inline-block shadow-lg/10 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full mr-2 mt-2">
                     {tech}
                   </span>
                 ))}
@@ -62,7 +71,7 @@ const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white shadow-lg/30 bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-md cursor-pointer"
+                    className="text-white shadow-lg/10 bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-md cursor-pointer"
                   >
                     Live Demo
                   </a>
@@ -71,7 +80,7 @@ const Projects = () => {
                   <a
                     href={project.downloadAPK}
                     download
-                    className="text-white shadow-lg/30 bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-md cursor-pointer"
+                    className="text-white shadow-lg/10 bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-md cursor-pointer"
                   >
                     📱 Download Android App
                   </a>
@@ -81,7 +90,7 @@ const Projects = () => {
                     href={project.gitHubRepo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white shadow-lg/30 bg-gray-800 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700 px-4 py-1 rounded-md cursor-pointer"
+                    className="text-white shadow-lg/10 bg-gray-800 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700 px-4 py-1 rounded-md cursor-pointer"
                   >
                     View Code
                   </a>
