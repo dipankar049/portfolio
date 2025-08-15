@@ -45,29 +45,23 @@ It showcases my **skills, education, experience, and projects** with a clean, mo
 ## 📷 Screenshots
 
 ### 🏠 Home Page  
-![Home](https://github.com/user-attachments/assets/e7511270-c350-4ba7-ac43-51e9510ac737)
-
-### 👤 About  
-![About](https://github.com/user-attachments/assets/f3142ca1-183b-4048-92f3-a1c49c51a9fd)
+![Home](https://github.com/user-attachments/assets/f573fc2d-3cb2-4afc-b0aa-3a4df0c6cc8b)
 
 ### 🛠️ Skills  
-![Skills](https://github.com/user-attachments/assets/0f2ddcae-bbf8-44bb-9d64-ae24bd71c995)
+![Skills](https://github.com/user-attachments/assets/38be319e-a8c9-4b83-add8-8ef02caa51f5)
 
 ### 💻 Projects  
-![Projects](https://github.com/user-attachments/assets/5c86a2c7-9106-4f27-a922-eb98ce314a04)
+![Projects](https://github.com/user-attachments/assets/af25ef6c-6d1f-421a-932f-1b8baa15303c)
 
 ### 🎓 Education  
-![Education](https://github.com/user-attachments/assets/d7cca052-a3d4-414c-b4d5-2b750a5c032d)
-
-### 💼 Work Experience  
-![Work Experience](https://github.com/user-attachments/assets/640156bb-4334-4b4d-bc96-172affdcab7b)
+![Education](https://github.com/user-attachments/assets/86fc1808-3493-4c22-a947-91289c99fea0)
 
 ### 📱 Mobile View
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/c1150e77-40f6-4da9-8701-40e0a83576af" alt="Home (Mobile)" width="45%" />
+  <img src="https://github.com/user-attachments/assets/8df81336-ab7f-48a4-acf8-f622754bf129" alt="Home (Mobile)" width="45%" />
   &nbsp;
-  <img src="https://github.com/user-attachments/assets/9f082e04-a4d5-4a07-8183-6050bc96d0eb" alt="Education (Mobile)" width="45%" />
+  <img src="https://github.com/user-attachments/assets/f890b1c6-8699-432e-8caf-1926b64e44c0" alt="Skills (Mobile)" width="45%" />
 </div>
 
 ---
