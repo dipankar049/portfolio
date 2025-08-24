@@ -12,7 +12,7 @@ const About = () => {
           💻 Tech I'm familiar with includes <span className="font-medium">React, Tailwind CSS, Node.js, Express, MongoDB</span>, and
           I also love creating cross-platform apps using <span className="font-medium">Flutter</span>.
           <br /><br />
-          🚀 When I’m not building projects, I sharpen my problem-solving skills on platforms like
+          🚀 When I’m not building projects, I sharpen my problem-solving skills on 
           <a
             href="https://leetcode.com/Dipankar_Karan"
             target="_blank"
@@ -20,15 +20,6 @@ const About = () => {
             className="font-medium text-blue-600 hover:text-blue-800 transition px-1"
           >
             LeetCode
-          </a>
-          and
-          <a
-            href="https://www.hackerrank.com/dipb7266"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-blue-600 hover:text-blue-800 transition px-1"
-          >
-            HackerRank
           </a>.
         </p>
 

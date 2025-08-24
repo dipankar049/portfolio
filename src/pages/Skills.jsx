@@ -1,6 +1,6 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaJava } from 'react-icons/fa';
-import { SiTailwindcss, SiBootstrap, SiMongodb, SiMysql, SiExpress, SiGit, SiGithub, SiVercel, SiFirebase, SiPython } from 'react-icons/si';
-import SiVSCode from "../assets/vscode.svg";
+import { SiTailwindcss, SiBootstrap, SiMongodb, SiMysql, SiExpress, SiGit, SiGithub, SiVercel, SiFirebase, SiPostman, SiPython } from 'react-icons/si';
+import { BiNetworkChart } from "react-icons/bi";
 
 const iconMap = {
   HTML5: <FaHtml5 className="text-orange-600" />,
@@ -19,17 +19,19 @@ const iconMap = {
   GitHub: <SiGithub className="text-gray-800 dark:text-gray-300" />,
   Firebase: <SiFirebase  className='text-yellow-500'/>,
   Vercel: <SiVercel/>,
-  "VS Code": <img src={SiVSCode} alt="VS Code" className="w-4 h-4" />,
+  Postman: <SiPostman className="text-orange-500" />,
+  "Socket.IO": <BiNetworkChart className="text-black dark:text-white" />,
 };
 
 const Skills = () => {
   const skillCategories = {
     "Frontend": ["React", "HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
-    "Backend": ["Node.js", "Express.js", "Firebase"],
+    "Backend": ["Node.js", "Express.js", "Socket.IO"],
     "Database": ["MySQL", "MongoDB"],
-    "Programming": ["Java", "JavaScript", "Python"],
-    "Tools": ["Git", "GitHub", "VS Code", "Vercel"]
+    "Programming": ["Java", "JavaScript"],
+    "Tools": ["Git", "GitHub", "Vercel", "Postman"]
   };
+
 
   return (
     <section className="w-full py-4 sm:my-10 px-6 min-h-[calc(100vh-11rem)]">

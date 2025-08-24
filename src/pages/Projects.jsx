@@ -3,6 +3,7 @@ import ECommerceImage from '../assets/ecommerce.webp';
 import TaskTrackerImage from '../assets/taskTracker.png';
 import taskTrackerLiteImage from '../assets/task-tracker-lite.png';
 import HabitTrackerImage from '../assets/HabitTracker.png';
+import ChatRoomImage from '../assets/chat-room.jpg';
 
 const Projects = () => {
   const projects = [
@@ -28,6 +29,14 @@ const Projects = () => {
       tech: ["React", "Tailwind CSS", "Node.js", "MySQL", "JWT", "React Router"],
       gitHubRepo: "https://github.com/Prompt-Driven-Engineers/Inventory-Order-Management-System",
       imageUrl: ECommerceImage,
+    },
+    {
+      title: "Chat Room",
+      description: "A simple real-time chat application built with React, Socket.IO, Node.js, and MongoDB. Users can join rooms, see online users, and chat in real-time.",
+      tech: ["React", "Tailwind CSS", "Socket.IO", "Node.js", "MongoDB"],
+      liveLink: "https://chat-room-blue.vercel.app/",
+      gitHubRepo: "https://github.com/dipankar049/chat-room",
+      imageUrl: ChatRoomImage,
     },
     {
       title: "Task Tracker Lite",
