@@ -61,14 +61,14 @@ const Projects = () => {
       <h2 className="text-3xl md:text-4xl font-bold text-shadow-lg/30 text-blue-600 text-center mb-6 sm:mb-10">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <div key={index} className="bg-white dark:bg-gray-800 dark:text-gray-200 shadow-lg/50 rounded-lg overflow-hidden hover:scale-105 transition duration-300 ease-in">
+          <div key={index} className="bg-gray-800 text-gray-200 shadow-lg/50 rounded-lg overflow-hidden hover:scale-105 transition duration-300 ease-in">
             <img src={project.imageUrl} alt={project.title} className="w-full aspect-4/2 object-center" />
             <div className="p-4">
               <h3 className="text-xl text-blue-400 text-shadow-lg/50 font-semibold">{project.title}</h3>
-              <p className="text-gray-700 dark:text-gray-400 text-shadow-lg/20 mt-2">{project.description}</p>
+              <p className="text-gray-400 text-shadow-lg/20 mt-2">{project.description}</p>
               <div className="mt-1">
                 {project.tech.map((tech, index) => (
-                  <span key={index} className="inline-block shadow-lg/10 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full mr-2 mt-2">
+                  <span key={index} className="inline-block shadow-lg/10 text-sm bg-gray-700 text-gray-200 py-1 px-2 rounded-full mr-2 mt-2">
                     {tech}
                   </span>
                 ))}
@@ -99,7 +99,7 @@ const Projects = () => {
                     href={project.gitHubRepo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white shadow-lg/10 bg-gray-800 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700 px-4 py-1 rounded-md cursor-pointer"
+                    className="text-white shadow-lg/10 bg-gray-600 hover:bg-gray-700 px-4 py-1 rounded-md cursor-pointer"
                   >
                     View Code
                   </a>

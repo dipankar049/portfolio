@@ -10,17 +10,17 @@ const iconMap = {
   "Tailwind CSS": <SiTailwindcss className="text-sky-400" />,
   Bootstrap: <SiBootstrap className="text-purple-600" />,
   "Node.js": <FaNodeJs className="text-green-600" />,
-  "Express.js": <SiExpress className="text-gray-800 dark:text-gray-300" />,
+  "Express.js": <SiExpress className="text-gray-300" />,
   MySQL: <SiMysql className="text-blue-700" />,
   MongoDB: <SiMongodb className="text-green-500" />,
   Python: <SiPython className="text-blue-500" />,
   Java: <FaJava className="text-red-600" />,
   Git: <SiGit className="text-orange-500" />,
-  GitHub: <SiGithub className="text-gray-800 dark:text-gray-300" />,
+  GitHub: <SiGithub className="text-gray-300" />,
   Firebase: <SiFirebase  className='text-yellow-500'/>,
   Vercel: <SiVercel/>,
   Postman: <SiPostman className="text-orange-500" />,
-  "Socket.IO": <BiNetworkChart className="text-black dark:text-white" />,
+  "Socket.IO": <BiNetworkChart className="text-white" />,
 };
 
 const Skills = () => {
@@ -39,11 +39,11 @@ const Skills = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-shadow-lg/30 text-blue-600 text-center mb-6 sm:mb-10">Skills</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {Object.entries(skillCategories).map(([category, skills]) => (
-            <div key={category} className="bg-white dark:bg-gray-800 shadow-xl/50 rounded-xl p-6 hover:scale-105 transition duration-400 ease-in-out cursor-pointer">
+            <div key={category} className="bg-gray-800 shadow-xl/50 rounded-xl p-6 hover:scale-105 transition duration-400 ease-in-out cursor-pointer">
               <h3 className="text-xl text-shadow-lg/50 font-semibold text-blue-600 mb-4">{category}</h3>
               <ul className="space-y-2">
                 {skills.map(skill => (
-                  <li key={skill} className="flex items-center text-shadow-lg/50 gap-2 text-gray-700 dark:text-gray-200 hover:translate-x-3 transition duration-300">
+                  <li key={skill} className="flex items-center text-shadow-lg/50 gap-2 text-gray-200 hover:translate-x-3 transition duration-300">
                     {iconMap[skill] || '•'} <span>{skill}</span>
                   </li>
                 ))}
