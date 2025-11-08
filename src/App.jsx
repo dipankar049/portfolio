@@ -17,15 +17,21 @@ function App() {
           {/* <div className='min-h-dvh flex flex-col bg-[linear-gradient(to_bottom_right,_#374151,_#1f2937,_#374151,_#111827)]'> */}
           <div className='min-h-dvh flex flex-col bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900'>
             <Header />
-            <div className='my-14 py-4 px-[5vw] grow'>
-              <Routes>
+            <div className='my-14 py-4 px-[5vw] grow flex flex-col gap-6'>
+              <Home />
+              <About />
+              <Skills />
+              <Projects />
+              <Experience />
+              <Education />
+              {/* <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/skills" element={<Skills />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/experience" element={<Experience />} />
                 <Route path="/education" element={<Education />} />
-              </Routes>
+              </Routes> */}
             </div>
             <Footer />
           </div>

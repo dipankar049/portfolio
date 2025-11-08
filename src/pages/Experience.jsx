@@ -2,7 +2,7 @@ import React from 'react';
 
 const Experience = () => {
   return (
-    <section className="my-4 sm:my-10 px-4 md:px-12 min-h-[calc(100vh-11rem)]">
+    <section className="experience my-4 sm:my-10 px-4 md:px-12 min-h-[calc(100vh-60px)]">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-shadow-lg/30 text-blue-600 mb-6 sm:mb-10 animate-fade-in">Experience</h2>
       <div className="space-y-10">
         {/* Unified Mentor */}

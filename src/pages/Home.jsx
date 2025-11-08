@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <>
-      <div className="flex items-center pt-4 justify-center min-h-[calc(100vh-11rem)] px-4">
+    <section className='home'>
+      <div className="flex items-center pt-4 justify-center min-h-[calc(100vh-60px)] px-4">
       <div className="flex flex-col md:flex-row-reverse items-center gap-10 max-w-5xl w-full">
         
       <div className="flex-shrink-0 rounded-full shadow-xl/30">
@@ -43,7 +43,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-    </>
+    </section>
   );
 };
 
