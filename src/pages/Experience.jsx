@@ -5,19 +5,19 @@ const Experience = () => {
     <section className="experience my-4 sm:my-10 px-4 md:px-12 min-h-[calc(100vh-60px)]">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-shadow-lg/30 text-blue-600 mb-6 sm:mb-10 animate-fade-in">Experience</h2>
       <div className="space-y-10">
-        {/* Unified Mentor */}
+        {/* 3W Business Private Limited */}
         <div className="bg-gray-800 p-6 rounded-2xl shadow-lg/30 hover:shadow-xl/30 hover:scale-105 transition duration-300 ease-in-out cursor-pointer">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="md:w-1/3">
-              <h3 className="text-xl md:text-2xl text-shadow-lg/30 font-semibold text-blue-600">MERN Stack Developer Intern</h3>
-              <p className="text-base text-gray-500">Unified Mentor</p>
-              <p className="text-sm text-gray-400">Jan 2025 - Jun 2025</p>
+              <h3 className="text-xl md:text-2xl text-shadow-lg/30 font-semibold text-blue-600">Full Stack Developer Intern</h3>
+              <p className="text-base text-gray-500">3W Business Private Limited</p>
+              <p className="text-sm text-gray-400">Sep 2025 - Present</p>
             </div>
             <div className="md:w-2/3">
               <p className="text-gray-500 text-shadow-lg/30 text-md">
-                Developed modern full-stack applications using the MERN stack. Focused on enhancing performance and delivering responsive, scalable user experiences through close team collaboration.
+                Contributing to production-level React Native application and React web platforms. Responsible for developing new features, improving UI/UX, fixing bugs, and ensuring smooth performance. Collaborate on backend services with Node.js and MongoDB, handling API updates, data workflows, and testing for stability across devices and environments.
               </p>
-              <p className="text-gray-400 mt-2 italic">Tech used: React, Node.js, Express, MongoDB</p>
+              <p className="text-gray-400 mt-2 italic">Tech used: React, React Native, Node.js, Express, MongoDB, CSS</p>
             </div>
           </div>
         </div>

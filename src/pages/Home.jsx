@@ -1,5 +1,5 @@
 import avatar from '../assets/avatar.jpg';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 const Home = () => {
   return (
@@ -34,8 +34,8 @@ const Home = () => {
               Download Resume
             </a>
             <Link
-              to="/projects"
-              className="bg-gray-800 shadow-xl/30 border border-gray-200 text-gray-200 px-3 sm:px-6 py-2 rounded-lg hover:bg-gray-800 hover:scale-110 transition duration-400 ease-in-out"
+              to="projects" offset={-80} smooth duration={500} 
+              className="bg-gray-800 shadow-xl/30 border border-gray-200 text-gray-200 px-3 sm:px-6 py-2 rounded-lg hover:bg-gray-800 hover:scale-110 transition duration-400 ease-in-out cursor-pointer"
             >
               View Projects
             </Link>
