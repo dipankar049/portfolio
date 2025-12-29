@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from "react-scroll";
 import { Menu, X } from 'lucide-react';
+import { motion } from "framer-motion";
 
 const LinkClass = 'hover:text-blue-500 text-shadow-lg/50 hover:scale-110 transition duration-200';
 
@@ -8,7 +9,13 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className='fixed top-0 left-0 w-full z-50 bg-gray-800 shadow-lg/30 text-gray-300'>
+    // <header className='fixed top-0 left-0 w-full z-50 bg-gray-800 shadow-lg/30 text-gray-300'>
+    <motion.header
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="fixed top-0 left-0 w-full z-50 bg-gray-800 shadow-lg/30 text-gray-300"
+    >
       <div className='flex items-center justify-between px-4 py-4 sm:px-6 md:px-8'>
         {/* Logo */}
         <Link to='home' offset={-80} smooth duration={500} className='text-md sm:text-xl text-shadow-lg/50 font-bold hover:scale-105 transition duration-200 cursor-pointer'>
@@ -44,6 +51,6 @@ export default function Header() {
           <Link to='education' offset={-70} smooth duration={500} className={LinkClass} onClick={() => setMenuOpen(false)}>➛ Education</Link>
         </nav>
       )}
-    </header>
+    </motion.header>
   );
 }

@@ -1,22 +1,22 @@
-# 🧑‍💻 Personal Developer Portfolio
+# Personal Developer Portfolio
 
 A fully responsive, single-page developer portfolio website built with **React**, **Tailwind CSS**, and **React Router**.  
 It showcases my **skills, education, experience, and projects** with a clean, modern UI — optimized for all devices.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 📱 **Responsive Design**  
+- **Responsive Design**  
   Works seamlessly on mobile, tablet, and desktop
 
-- ⚛️ **Built with React + React Router**  
+- **Built with React + React Router**  
   Smooth navigation without full page reloads
 
-- 🎨 **Styled with Tailwind CSS + Custom CSS3**  
+- **Styled with Tailwind CSS + Custom CSS3**  
   Clean and minimal visual design with component-level styling
 
-- 🧠 **Modular Sections**  
+- **Modular Sections**  
   - Home 
   - About
   - Skills  
@@ -26,13 +26,13 @@ It showcases my **skills, education, experience, and projects** with a clean, mo
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
-🔗 [View Portfolio Live](https://dipankar049-portfolio.vercel.app/)
+[View Portfolio Live](https://dipankar049-portfolio.vercel.app/)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category      | Technologies Used        |
 |---------------|--------------------------|
@@ -42,21 +42,21 @@ It showcases my **skills, education, experience, and projects** with a clean, mo
 
 ---
 
-## 📷 Screenshots
+## Screenshots
 
-### 🏠 Home Page  
+### Home Page  
 ![Home](https://github.com/user-attachments/assets/f573fc2d-3cb2-4afc-b0aa-3a4df0c6cc8b)
 
-### 🛠️ Skills  
+### Skills  
 ![Skills](https://github.com/user-attachments/assets/38be319e-a8c9-4b83-add8-8ef02caa51f5)
 
-### 💻 Projects  
+### Projects  
 ![Projects](https://github.com/user-attachments/assets/af25ef6c-6d1f-421a-932f-1b8baa15303c)
 
-### 🎓 Education  
+### Education  
 ![Education](https://github.com/user-attachments/assets/86fc1808-3493-4c22-a947-91289c99fea0)
 
-### 📱 Mobile View
+### Mobile View
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/8df81336-ab7f-48a4-acf8-f622754bf129" alt="Home (Mobile)" width="45%" />
@@ -66,16 +66,16 @@ It showcases my **skills, education, experience, and projects** with a clean, mo
 
 ---
 
-## 🧑‍💻 Getting Started
+## Getting Started
 
-### ✅ Prerequisites
+### Prerequisites
 
 - Node.js ≥ 14  
 - npm or yarn
 
 ---
 
-### 🧪 Run Locally
+### Run Locally
 
 ```bash
 # Clone the repo
@@ -93,13 +93,13 @@ App runs at `http://localhost:5173` (Vite default).
 
 ---
 
-## 📄 License
+## License
 
 This project is free to use and customize for personal developer portfolios.
 
 ---
 
-## 🙌 Credits
+## Credits
 
 Inspired by modern UI trends and developer best practices.
 

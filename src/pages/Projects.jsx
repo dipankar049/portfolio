@@ -4,8 +4,38 @@ import TaskTrackerImage from '../assets/taskTracker.png';
 import taskTrackerLiteImage from '../assets/task-tracker-lite.png';
 import HabitTrackerImage from '../assets/HabitTracker.png';
 import ChatRoomImage from '../assets/chat-room.jpg';
+import { motion } from "framer-motion";
 
 const Projects = () => {
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const card = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const imageAnim = {
+    hover: {
+      scale: 1.05,
+      transition: { duration: 0.4 },
+    },
+  };
+
   const projects = [
     {
       title: "DSA Simulator",
@@ -58,11 +88,34 @@ const Projects = () => {
 
   return (
     <section className="projects my-4 sm:my-10 px-4 min-h-[calc(100vh-60px)]">
-      <h2 className="text-3xl md:text-4xl font-bold text-shadow-lg/30 text-blue-600 text-center mb-6 sm:mb-10">Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <motion.h2
+        variants={card}
+        className="text-3xl md:text-4xl font-bold text-blue-600 text-center mb-6 sm:mb-10"
+      >
+        Projects
+      </motion.h2>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
         {projects.map((project, index) => (
-          <div key={index} className="bg-gray-800 text-gray-200 shadow-lg/50 rounded-lg overflow-hidden hover:scale-105 transition duration-300 ease-in">
-            <img src={project.imageUrl} alt={project.title} className="w-full aspect-4/2 object-center" />
+          <motion.div
+            key={index}
+            variants={card}
+            whileHover={{ y: -8, scale: 1.03 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="bg-gray-800 text-gray-200 shadow-lg/50 rounded-lg overflow-hidden"
+          >
+            <motion.img
+              src={project.imageUrl}
+              alt={project.title}
+              variants={imageAnim}
+              whileHover="hover"
+              className="w-full aspect-4/2 object-center"
+            />
             <div className="p-4">
               <h3 className="text-xl text-blue-400 text-shadow-lg/50 font-semibold">{project.title}</h3>
               <p className="text-gray-400 text-shadow-lg/20 mt-2">{project.description}</p>
@@ -76,14 +129,16 @@ const Projects = () => {
               </div>
               <div className="mt-4 flex flex-wrap gap-3">
                 {project.liveLink && (
-                  <a
+                  <motion.a
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.95 }}
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white shadow-lg/10 bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-md cursor-pointer"
+                    className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-1.5 rounded-md"
                   >
                     Live Demo
-                  </a>
+                  </motion.a>
                 )}
                 {project.downloadAPK && (
                   <a
@@ -95,20 +150,22 @@ const Projects = () => {
                   </a>
                 )}
                 {project.gitHubRepo && (
-                  <a
+                  <motion.a
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.95 }}
                     href={project.gitHubRepo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white shadow-lg/10 bg-gray-600 hover:bg-gray-700 px-4 py-1 rounded-md cursor-pointer"
+                    className="text-white bg-gray-600 hover:bg-gray-700 px-4 py-1.5 rounded-md"
                   >
                     View Code
-                  </a>
+                  </motion.a>
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
