@@ -24,19 +24,19 @@ const Projects = () => {
       imageUrl: HabitTrackerImage,
     },
     {
-      title: "MultiVendor E-Commerce System",
-      description: "A multivendor e-commerce platform with vendor dashboards, product listings, and order management. Built using React, Node.js, MongoDB, and Tailwind CSS.",
-      tech: ["React", "Tailwind CSS", "Node.js", "MySQL", "JWT", "React Router"],
-      gitHubRepo: "https://github.com/Prompt-Driven-Engineers/Inventory-Order-Management-System",
-      imageUrl: ECommerceImage,
-    },
-    {
       title: "Chat Room",
       description: "A simple real-time chat application built with React, Socket.IO, Node.js, and MongoDB. Users can join rooms, see online users, and chat in real-time.",
       tech: ["React", "Tailwind CSS", "Socket.IO", "Node.js", "MongoDB"],
       liveLink: "https://chat-room-blue.vercel.app/",
       gitHubRepo: "https://github.com/dipankar049/chat-room",
       imageUrl: ChatRoomImage,
+    },
+    {
+      title: "MultiVendor E-Commerce System",
+      description: "A multivendor e-commerce platform with vendor dashboards, product listings, and order management. Built using React, Node.js, MongoDB, and Tailwind CSS.",
+      tech: ["React", "Tailwind CSS", "Node.js", "MySQL", "JWT", "React Router"],
+      gitHubRepo: "https://github.com/Prompt-Driven-Engineers/Inventory-Order-Management-System",
+      imageUrl: ECommerceImage,
     },
     {
       title: "Task Tracker Lite",
