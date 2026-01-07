@@ -8,7 +8,7 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
-import PremiumBackground from './components/PremiumBackground';
+import Background from './components/Background';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Router>
           {/* <div className='min-h-dvh flex flex-col bg-[linear-gradient(to_bottom_right,_#374151,_#1f2937,_#374151,_#111827)]'> */}
           <div className="min-h-dvh flex flex-col relative overflow-hidden">
-            <PremiumBackground />
+            <Background />
             <div className="relative z-10">
               <Header />
               <div className="my-14 py-4 px-[5vw] grow flex flex-col gap-6">

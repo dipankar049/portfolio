@@ -1,0 +1,49 @@
+/* ================= GLOWING BUBBLE ================= */
+
+.glowing-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2) 40%,
+    rgba(255, 255, 255, 0.05) 60%,
+    transparent 70%
+  );
+  box-shadow:
+    inset 0 0 16px rgba(255, 255, 255, 0.35),
+    0 0 40px rgba(59, 130, 246, 0.25);
+}
+
+/* ================= SPARKLES ================= */
+
+.sparkle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+/* ================= NOISE ================= */
+
+.noise-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0.02;
+  background-image:
+    url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGZpbHRlciBpZD0ibm9pc2UiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjgiIC8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWx0ZXI9InVybCgjbm9pc2UpIiBvcGFjaXR5PSIwLjUiIC8+PC9zdmc+");
+}
+
+/* ================= VIGNETTE ================= */
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+}

@@ -87,7 +87,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="projects my-4 sm:my-10 px-4 min-h-[calc(100vh-60px)]">
+    <section className="projects my-6 sm:my-10 px-4 min-h-[calc(100vh-60px)]">
       <motion.h2
         variants={card}
         className="text-3xl md:text-4xl font-bold text-blue-600 text-center mb-6 sm:mb-10"

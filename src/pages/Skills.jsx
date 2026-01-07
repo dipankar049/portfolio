@@ -69,7 +69,7 @@ const Skills = () => {
 
 
   return (
-    <section className="skills w-full py-4 sm:my-10 px-6 min-h-[calc(100vh-60px)]">
+    <section className="skills w-full py-6 sm:my-4 px-6 min-h-[calc(100vh-60px)]">
       <motion.div
         initial="hidden"
         whileInView="visible"
