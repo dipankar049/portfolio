@@ -41,7 +41,7 @@ const Home = () => {
               alt="Dipankar Avatar"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="w-44 h-44 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full object-contain bg-gray-500 pt-4 shadow-xl/30"
+              className="w-44 h-44 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full object-contain bg-white/5 border border-white/10 backdrop-blur-md pt-4 shadow-xl/30"
             />
           </div>
           {/* Text Content */}
@@ -55,14 +55,14 @@ const Home = () => {
               variants={item}
               className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
             >
-              Hi, I’m <span className="text-blue-600">Dipankar</span>
+              Hi, I’m <span className="text-sky-400">Dipankar</span>
             </motion.h1>
 
             <motion.p variants={item} className="text-xl sm:text-2xl mb-2">
               B.Tech in Computer Science | MERN Stack Developer
             </motion.p>
 
-            <motion.p variants={item} className="text-md sm:text-lg text-gray-400 mb-6">
+            <motion.p variants={item} className="text-md sm:text-lg text-gray-300 mb-6">
               I love building web and mobile apps that solve real-world problems.
             </motion.p>
 
@@ -77,7 +77,7 @@ const Home = () => {
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300, delay: 0.2 }}
-                className="shadow-xl/30 bg-gray-800 border border-gray-200 text-white px-3 sm:px-6 py-2 rounded-lg cursor-pointer"
+                className="shadow-xl/30 bg-white/5 border border-white/10 backdrop-blur-md text-white px-3 sm:px-6 py-2 rounded-lg cursor-pointer"
               >
                 Download Resume
               </motion.a>
@@ -93,7 +93,7 @@ const Home = () => {
                   offset={-80}
                   smooth
                   duration={500}
-                  className="bg-gray-800 shadow-xl/30 border border-gray-200 text-gray-200 px-3 sm:px-6 py-2 rounded-lg cursor-pointer inline-block"
+                  className="bg-white/5 border border-white/10 backdrop-blur-md shadow-xl/30 text-gray-200 px-3 sm:px-6 py-2 rounded-lg cursor-pointer inline-block"
                 >
                   View Projects
                 </Link>

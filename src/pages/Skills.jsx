@@ -1,5 +1,5 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaJava } from 'react-icons/fa';
-import { SiTailwindcss, SiBootstrap, SiMongodb, SiMysql, SiExpress, SiGit, SiGithub, SiVercel, SiFirebase, SiPostman, SiPython } from 'react-icons/si';
+import { SiTailwindcss, SiBootstrap, SiMongodb, SiMysql, SiExpress, SiGit, SiGithub, SiVercel, SiFirebase, SiPostman, SiPython, SiReact } from 'react-icons/si';
 import { BiNetworkChart } from "react-icons/bi";
 import { motion } from "framer-motion";
 
@@ -22,12 +22,14 @@ const iconMap = {
   Vercel: <SiVercel/>,
   Postman: <SiPostman className="text-orange-500" />,
   "Socket.IO": <BiNetworkChart className="text-white" />,
+  "React Native": <FaReact className="text-cyan-400" />,
 };
 
 const Skills = () => {
   const container = {
-    hidden: {},
+    hidden: { opacity: 0 },
     visible: {
+      opacity: 1,
       transition: {
         staggerChildren: 0.15,
         delayChildren: 0.1,
@@ -41,8 +43,7 @@ const Skills = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
-        ease: "easeOut",
+        duration: 0.6,
       },
     },
   };
@@ -53,16 +54,15 @@ const Skills = () => {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.3,
-        ease: "easeOut",
+        duration: 0.25,
       },
     },
   };
 
   const skillCategories = {
-    "Frontend": ["React", "HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
+    "Frontend": ["React", "React Native", "CSS3", "Tailwind CSS"],
     "Backend": ["Node.js", "Express.js", "Socket.IO"],
-    "Database": ["MySQL", "MongoDB"],
+    "Database": ["MySQL", "MongoDB", "Firebase"],
     "Programming": ["Java", "JavaScript"],
     "Tools": ["Git", "GitHub", "Vercel", "Postman"]
   };
@@ -75,11 +75,11 @@ const Skills = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={container}
-        className="max-w-4xl mx-auto"
+        className="max-w-5xl mx-auto"
       >
         <motion.h2
           variants={card}
-          className="text-3xl md:text-4xl font-bold text-blue-600 text-center mb-6 sm:mb-10"
+          className="text-3xl md:text-4xl font-bold text-indigo-400 text-center mb-6 sm:mb-10"
         >
           Skills
         </motion.h2>
@@ -88,18 +88,33 @@ const Skills = () => {
             <motion.div
               key={category}
               variants={card}
-              whileHover={{ y: -6, scale: 1.04 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="bg-gray-800 shadow-xl/50 rounded-xl p-6 cursor-pointer"
+              whileHover={{
+                y: -4,
+                scale: 1.02
+              }}
+              transition={{
+                duration: 0.25
+              }}
+              className="
+                bg-white/5
+                border border-white/10
+                hover:border-indigo-400/40
+                backdrop-blur-xl
+                rounded-2xl
+                p-6
+                cursor-pointer
+                shadow-2xl
+                transition-all duration-300
+              "
             >
-              <h3 className="text-xl text-shadow-lg/50 font-semibold text-blue-600 mb-4">{category}</h3>
+              <h3 className="text-xl font-semibold text-indigo-400 mb-4">{category}</h3>
               <ul className="space-y-2">
                 {skills.map((skill) => (
                   <motion.li
                     key={skill}
                     variants={listItem}
                     whileHover={{ x: 8 }}
-                    className="flex items-center gap-2 text-gray-200"
+                    className="flex items-center gap-2 text-gray-300"
                   >
                     {iconMap[skill] || "•"} <span>{skill}</span>
                   </motion.li>
