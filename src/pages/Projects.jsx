@@ -5,6 +5,7 @@ import taskTrackerLiteImage from '../assets/task-tracker-lite.png';
 import HabitTrackerImage from '../assets/HabitTracker.png';
 import ChatRoomImage from '../assets/chat-room.png';
 import { motion } from "framer-motion";
+import { Github, PlayCircle, Download } from "lucide-react";
 
 const Projects = () => {
   const container = {
@@ -62,6 +63,16 @@ const Projects = () => {
       imageUrl: ChatRoomImage,
     },
     {
+      title: "Habit Tracker Mobile",
+      description:
+        "A mobile version of the Habit Tracker web app that help users to form and maintain habits. Users can set routines, add events in calendar, log time spent, and view weekly, monthly summaries to track progress.",
+      tech: ["React Native", "Expo", "Node.js", "MongoDB"],
+      gitHubRepo: "https://github.com/dipankar049/habit-tracker-app",
+      // demoVideo: "https://youtube.com/your-demo-video",
+      downloadAPK: "https://drive.google.com/drive/folders/10kewYN9StM-yHLmsF4fH2XMfkFvDR_o1?usp=drive_link",
+      imageUrl: HabitTrackerImage,
+    },
+    {
       title: "MultiVendor E-Commerce System",
       description: "A multivendor e-commerce platform with vendor dashboards, product listings, and order management.",
       tech: ["React", "Node.js", "MySQL", "JWT"],
@@ -76,14 +87,14 @@ const Projects = () => {
       gitHubRepo: "https://github.com/dipankar049/task-tracker-lite",
       imageUrl: taskTrackerLiteImage,
     },
-    {
-      title: "Task Tracker App",
-      description: "A Flutter-based mobile app to manage daily tasks with features like task creation, editing, and local storage using sqflite.",
-      tech: ["Flutter", "Dart", "sqflite"],
-      gitHubRepo: "https://github.com/dipankar049/TaskTrackr",
-      imageUrl: TaskTrackerImage,
-      downloadAPK: "https://drive.google.com/uc?export=download&id=1vPsnV1c7Qe1yRrCBWU-HrLeQrTZXrUCF"
-    }
+    // {
+    //   title: "Task Tracker App",
+    //   description: "A Flutter-based mobile app to manage daily tasks with features like task creation, editing, and local storage using sqflite.",
+    //   tech: ["Flutter", "Dart", "sqflite"],
+    //   gitHubRepo: "https://github.com/dipankar049/TaskTrackr",
+    //   imageUrl: TaskTrackerImage,
+    //   downloadAPK: "https://drive.google.com/uc?export=download&id=1vPsnV1c7Qe1yRrCBWU-HrLeQrTZXrUCF"
+    // }
   ];
 
   return (
@@ -106,12 +117,14 @@ const Projects = () => {
             key={index}
             variants={card}
             whileHover={{ y: -6 }}
-            onClick={() =>
-              window.open(
-                project.liveLink || project.gitHubRepo,
-                "_blank"
-              )
-            }
+            onClick={() => {
+              if (project.liveLink) {
+                window.open(
+                  project.liveLink || project.gitHubRepo,
+                  "_blank"
+                )
+              }
+            }}
             className="
               cursor-pointer
               bg-white/5
@@ -137,7 +150,7 @@ const Projects = () => {
               />
 
               {/* Desktop Hover Overlay */}
-              <div className="
+              {/* <div className="
                 absolute inset-0
                 bg-black/40
                 opacity-0
@@ -157,10 +170,127 @@ const Projects = () => {
                 ">
                   View Project →
                 </span>
+              </div> */}
+              <div
+                className="
+                  absolute inset-0
+                  bg-black/40
+                  opacity-0
+                  group-hover:opacity-100
+                  transition
+                  hidden sm:flex
+                  items-center justify-center
+                "
+              >
+
+                {project.downloadAPK ? (
+
+                  <div className="flex gap-4">
+
+                    {project.gitHubRepo && (
+                      <a
+                        href={project.gitHubRepo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-lg border border-white/60 bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Github size={18} className="text-white" />
+                      </a>
+                    )}
+
+                    {project.demoVideo && (
+                      <a
+                        href={project.demoVideo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-lg border border-white/60 bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <PlayCircle size={18} className="text-white" />
+                      </a>
+                    )}
+
+                    <a
+                      href={project.downloadAPK}
+                      className="p-3 rounded-lg border border-white/60 bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Download size={18} className="text-white" />
+                    </a>
+
+                  </div>
+
+                ) : (
+
+                  <span
+                    className="
+                      px-4 py-2
+                      border border-white/60
+                      text-white
+                      rounded-lg
+                      backdrop-blur-md
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    View Project →
+                  </span>
+                )}
               </div>
 
               {/* Mobile Badge */}
-              <div className="
+              {project.downloadAPK ? (
+                <div className="sm:hidden absolute bottom-2 right-2 flex gap-2">
+
+                  {project.gitHubRepo && (
+                    <a
+                      href={project.gitHubRepo}
+                      className="p-2 bg-black/60 rounded-md backdrop-blur-md"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Github size={16} className="text-white" />
+                    </a>
+                  )}
+
+                  {project.demoVideo && (
+                    <a
+                      href={project.demoVideo}
+                      className="p-2 bg-black/60 rounded-md backdrop-blur-md"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <PlayCircle size={16} className="text-white" />
+                    </a>
+                  )}
+
+                  <a
+                    href={project.downloadAPK}
+                    className="p-2 bg-black/60 rounded-md backdrop-blur-md"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <Download size={16} className="text-white" />
+                  </a>
+
+                </div>
+
+              ) : (
+
+                <div
+                  className="
+                    sm:hidden
+                    absolute bottom-2 right-2
+                    bg-black/60
+                    text-white
+                    text-sm
+                    px-2 py-1
+                    rounded-md
+                    backdrop-blur-md
+                  "
+                >
+                  Tap to View →
+                </div>
+              )}
+              {/* <div className="
                 sm:hidden
                 absolute bottom-2 right-2
                 bg-black/60
@@ -171,7 +301,7 @@ const Projects = () => {
                 backdrop-blur-md
               ">
                 Tap to View →
-              </div>
+              </div> */}
 
             </div>
 
