@@ -5,7 +5,7 @@ import taskTrackerLiteImage from '../assets/task-tracker-lite.png';
 import HabitTrackerImage from '../assets/HabitTracker.png';
 import ChatRoomImage from '../assets/chat-room.png';
 import { motion } from "framer-motion";
-import { Github, PlayCircle, Download } from "lucide-react";
+import { Github, PlayCircle, Download, Smartphone } from "lucide-react";
 
 const Projects = () => {
   const container = {
@@ -55,22 +55,23 @@ const Projects = () => {
       imageUrl: HabitTrackerImage,
     },
     {
+      title: "Habit Tracker Mobile",
+      description:
+        "A mobile version of the Habit Tracker web app that help users to form and maintain habits. Users can set routines, add events in calendar, log time spent, and view weekly, monthly summaries to track progress.",
+      tech: ["React Native", "Expo", "Node.js", "MongoDB"],
+      gitHubRepo: "https://github.com/dipankar049/habit-tracker-app",
+      demoVideo: "https://youtube.com/shorts/ihboXhdU0Pk?si=Z8i2fJ1DV4pFAanq",
+      downloadAPK: "https://github.com/dipankar049/habit-tracker-app/releases/download/v1.0.0/habitTrackerMobile.apk",
+      // downloadAPK: "https://drive.google.com/file/d/16-PnLMVcMrDkJMiU4h7VZjk0-q3PjgrV/view?usp=drive_link",
+      imageUrl: HabitTrackerImage,
+    },
+    {
       title: "Chat Room",
       description: "A simple real-time chat application built with React, Socket.IO, Node.js, and MongoDB. Users can join rooms, see online users, and chat in real-time.",
       tech: ["React", "Socket.IO", "Node.js", "MongoDB"],
       liveLink: "https://chat-room-blue.vercel.app/",
       gitHubRepo: "https://github.com/dipankar049/chat-room",
       imageUrl: ChatRoomImage,
-    },
-    {
-      title: "Habit Tracker Mobile",
-      description:
-        "A mobile version of the Habit Tracker web app that help users to form and maintain habits. Users can set routines, add events in calendar, log time spent, and view weekly, monthly summaries to track progress.",
-      tech: ["React Native", "Expo", "Node.js", "MongoDB"],
-      gitHubRepo: "https://github.com/dipankar049/habit-tracker-app",
-      // demoVideo: "https://youtube.com/your-demo-video",
-      downloadAPK: "https://drive.google.com/drive/folders/10kewYN9StM-yHLmsF4fH2XMfkFvDR_o1?usp=drive_link",
-      imageUrl: HabitTrackerImage,
     },
     {
       title: "MultiVendor E-Commerce System",
@@ -140,7 +141,14 @@ const Projects = () => {
 
             {/* Image */}
             <div className="relative overflow-hidden rounded-xl group">
-
+              {project.downloadAPK && (
+                <div className="absolute top-2 right-2 z-10 flex items-center gap-1.5 px-2 py-1 bg-indigo-500/20 backdrop-blur-md border border-indigo-400/30 rounded-lg shadow-lg">
+                  <Smartphone size={12} className="text-indigo-400" />
+                  <span className="text-[10px] font-bold text-indigo-300 tracking-wider uppercase">
+                    Android APK
+                  </span>
+                </div>
+              )}
               <motion.img
                 src={project.imageUrl}
                 alt={project.title}
@@ -213,6 +221,8 @@ const Projects = () => {
 
                     <a
                       href={project.downloadAPK}
+                      download
+                      target="_self"
                       className="p-3 rounded-lg border border-white/60 bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
                       onClick={(e) => e.stopPropagation()}
                     >
