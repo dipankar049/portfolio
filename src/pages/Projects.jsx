@@ -61,8 +61,8 @@ const Projects = () => {
       tech: ["React Native", "Expo", "Node.js", "MongoDB"],
       gitHubRepo: "https://github.com/dipankar049/habit-tracker-app",
       demoVideo: "https://youtube.com/shorts/ihboXhdU0Pk?si=Z8i2fJ1DV4pFAanq",
-      downloadAPK: "https://github.com/dipankar049/habit-tracker-app/releases/download/v1.0.0/habitTrackerMobile.apk",
-      // downloadAPK: "https://drive.google.com/file/d/16-PnLMVcMrDkJMiU4h7VZjk0-q3PjgrV/view?usp=drive_link",
+      // downloadAPK: "https://github.com/dipankar049/habit-tracker-app/releases/download/v1.0.0/habitTrackerMobile.apk",
+      downloadAPK: "https://github.com/dipankar049/habit-tracker-app/releases/latest/download/habitTrackerMobile.apk",
       imageUrl: HabitTrackerImage,
     },
     {
