@@ -9,6 +9,8 @@ import Skills from './pages/Skills';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Background from './components/Background';
+import ChatBot from './components/ChatBot';
+import "./App.css"
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
                 </Routes> */}
               </div>
               <Footer />
+              <ChatBot />
             </div>
           </div>
         </Router>
