@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { BotMessageSquare, X, SendHorizontal } from "lucide-react";
 import avatar from '../assets/avatar.jpg';
+import Linkify from "linkify-react";
 
 export default function ChatBot() {
     const [isOpen, setIsOpen] = useState(false);
@@ -51,16 +52,16 @@ export default function ChatBot() {
 
     return (
         <>
-            <button
+            {!isOpen && <button
                 onClick={() => setIsOpen(prev => !prev)}
                 className="group fixed bottom-4 sm:bottom-6 right-6 z-50
                 flex items-center justify-center
-                w-14 h-14 rounded-full 
-                bg-[#1e2540] border-t border-white/10 border-x border-white/5
-                shadow-[0_10px_20px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.05)]
+                w-14 h-14 rounded-3xl 
+                bg-[#1e2540] border border-white/20
+                backdrop-blur-md shadow-xl/10
                 hover:bg-[#252d4d] hover:scale-105 active:scale-95
-                transition-all duration-300 ease-out cursor-pointer
-                animate-soft-breathe"
+                transition-all duration-300 ease-out cursor-pointer"
+                // bg-[#1e2540] border-t border-white/10 border-x border-white/5
             >
                 <BotMessageSquare className="text-white/90 w-6 h-6 group-hover:text-white transition-colors" />
 
@@ -72,11 +73,11 @@ export default function ChatBot() {
                    transition-all duration-300 pointer-events-none whitespace-nowrap">
                     Chat with me
                 </span>
-            </button>
+            </button>}
 
             {/* Chat Modal */}
             {isOpen && (
-                <div className="fixed bottom-22 right-5 w-80 h-[480px] 
+                <div className="fixed bottom-16 right-5 w-80 h-[480px] 
                     backdrop-blur-xl bg-white/5 border border-white/10 
                     shadow-2xl rounded-2xl flex flex-col overflow-hidden
                     animate-[fadeIn_0.3s_ease]">
@@ -117,17 +118,19 @@ export default function ChatBot() {
                     {/* Messages */}
                     <div
                         ref={chatRef}
-                        className="flex-1 overflow-y-auto p-3 space-y-3 text-sm no-scrollbar"
+                        className="flex-1 overflow-y-auto p-3 space-y-2 text-sm no-scrollbar"
                     >
                         {messages.map((msg, i) => (
                             <div
                                 key={i}
-                                className={`whitespace-pre-line max-w-[75%] px-3 py-2 rounded-xl ${msg.role === "user"
-                                    ? "ml-auto bg-blue-500/80 text-white backdrop-blur-md"
+                                className={`whitespace-pre-line break-words max-w-[75%] px-3 py-2 rounded-xl ${msg.role === "user"
+                                    ? "ml-auto w-fit bg-indigo-500 text-white backdrop-blur-md"
                                     : "bg-white/10 text-gray-200 backdrop-blur-md"
                                     }`}
                             >
-                                {msg.text}
+                                <Linkify options={{ className: "text-blue-400 underline" }}>
+                                    {msg.text}
+                                </Linkify>
                             </div>
                         ))}
                         {isTyping && (
@@ -152,7 +155,7 @@ export default function ChatBot() {
 
                         <button
                             onClick={sendMessage}
-                            className="px-3 py-2 rounded-lg bg-blue-500/80 text-white 
+                            className="px-3 py-2 rounded-lg bg-indigo-500 text-white 
         hover:bg-blue-500 transition text-sm"
                         >
                             <SendHorizontal size={18} className="cursor-pointer" />

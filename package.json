@@ -13,6 +13,7 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.4",
     "framer-motion": "^12.23.26",
+    "linkify-react": "^4.3.2",
     "lucide-react": "^0.507.0",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
