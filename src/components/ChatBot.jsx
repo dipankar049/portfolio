@@ -10,12 +10,37 @@ export default function ChatBot() {
     ]);
     const [input, setInput] = useState("");
     const [isTyping, setIsTyping] = useState(false);
+    const [isWarming, setIsWarming] = useState(true);
 
     const chatRef = useRef();
 
     useEffect(() => {
         chatRef.current?.scrollTo(0, chatRef.current.scrollHeight);
     }, [messages]);
+
+    // Ping the backend once on mount to wake it up (Render free tier sleeps after inactivity)
+    useEffect(() => {
+        let cancelled = false;
+
+        const pingHealth = async (attempt = 1) => {
+            try {
+                const res = await fetch(`${import.meta.env.VITE_NODE_URI}/health`);
+                if (!res.ok) throw new Error("Not ready yet");
+                if (!cancelled) setIsWarming(false);
+            } catch (err) {
+                if (attempt < 4 && !cancelled) {
+                    // retry after a short delay — server might still be booting
+                    setTimeout(() => pingHealth(attempt + 1), 5000);
+                } else if (!cancelled) {
+                    setIsWarming(false); // give up after a few tries, don't hang the UI forever
+                }
+            }
+        };
+
+        pingHealth();
+
+        return () => { cancelled = true; };
+    }, []);
 
     const sendMessage = async () => {
         if (!input.trim() || isTyping) return;
@@ -45,6 +70,10 @@ export default function ChatBot() {
             ]);
         } catch (err) {
             console.log(err);
+            setMessages((prev) => [
+                ...prev,
+                { role: "bot", text: "Hmm, I couldn't reach the server. Give it a few seconds and try again — it might still be waking up. 🤖" }
+            ]);
         } finally {
             setIsTyping(false);
         }
@@ -61,11 +90,9 @@ export default function ChatBot() {
                 backdrop-blur-md shadow-xl/10
                 hover:bg-[#252d4d] hover:scale-105 active:scale-95
                 transition-all duration-300 ease-out cursor-pointer"
-                // bg-[#1e2540] border-t border-white/10 border-x border-white/5
             >
                 <BotMessageSquare className="text-white/90 w-6 h-6 group-hover:text-white transition-colors" />
 
-                {/* Tooltip */}
                 <span className="absolute right-16 px-3 py-1.5 rounded-xl
                    bg-[#1e2540] text-white/80 text-xs font-medium
                    border border-white/5 shadow-xl
@@ -96,7 +123,6 @@ export default function ChatBot() {
                                 <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-400 rounded-full border border-black"></span>
                             </div>
 
-                            {/* Text */}
                             <div>
                                 <p className="text-white text-sm font-semibold">
                                     Dipankar_049
@@ -114,6 +140,13 @@ export default function ChatBot() {
                             <X size={20} className="text-gray-400 cursor-pointer" />
                         </button>
                     </div>
+
+                    {/* Warming up notice */}
+                    {isWarming && (
+                        <div className="px-3 py-1.5 text-[11px] text-amber-300/90 bg-amber-500/10 border-b border-white/10 text-center">
+                            ⏳ Waking up my brain... first reply might take a few extra seconds
+                        </div>
+                    )}
 
                     {/* Messages */}
                     <div
