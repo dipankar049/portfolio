@@ -69,7 +69,7 @@ export default function ChatBot() {
                 { role: "bot", text: data.reply }
             ]);
         } catch (err) {
-            console.log(err);
+            // console.log("Error", err);
             setMessages((prev) => [
                 ...prev,
                 { role: "bot", text: "Hmm, I couldn't reach the server. Give it a few seconds and try again — it might still be waking up. 🤖" }
