@@ -39,31 +39,20 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Habit Tracker Mobile",
+      description: "An offline-first habit tracking app enabling users to manage routines and logs offline with automatic sync when back online. Includes a cron-based notification system that analyzes routines and activity to generate personalized reminders via FCM.",
+      tech: ["React Native", "WatermelonDB", "Node.js", "MongoDB", "FCM"],
+      liveLink: "https://play.google.com/store/apps/details?id=com.dkdev.habitracker",
+      isMobileApp: true,
+      imageUrl: HabitTrackerImage,
+    },
+    {
       title: "DSA Simulator",
       description: "A platform to visualize DSA algorithms like array and linked list operations, and various sorting and searching algorithms, with step-by-step animations.",
       tech: ["React", "JavaScript", "Tailwind", "CSS3"],
       liveLink: "https://dsa-simulator-three.vercel.app/",
       gitHubRepo: "https://github.com/dipankar049/dsa-simulator",
       imageUrl: DSAImage,
-    },
-    {
-      title: "Habit Tracker",
-      description: "An application that help users to form and maintain habits. Users can set routines, add events in calendar, log time spent, and view weekly, monthly summaries to track progress.",
-      tech: ["React", "Tailwind CSS", "Nodejs", "MongoDB"],
-      liveLink: "https://habit-tracker-wx7h.vercel.app/",
-      gitHubRepo: "https://github.com/dipankar049/habit-tracker",
-      imageUrl: HabitTrackerImage,
-    },
-    {
-      title: "Habit Tracker Mobile",
-      description:
-        "A mobile version of the Habit Tracker web app that help users to form and maintain habits. Users can set routines, add events in calendar, log time spent, and view weekly, monthly summaries to track progress.",
-      tech: ["React Native", "Expo", "Node.js", "MongoDB"],
-      gitHubRepo: "https://github.com/dipankar049/habit-tracker-app",
-      demoVideo: "https://youtube.com/shorts/ihboXhdU0Pk?si=Z8i2fJ1DV4pFAanq",
-      // downloadAPK: "https://github.com/dipankar049/habit-tracker-app/releases/download/v1.0.0/habitTrackerMobile.apk",
-      downloadAPK: "https://github.com/dipankar049/habit-tracker-app/releases/latest/download/habitTrackerMobile.apk",
-      imageUrl: HabitTrackerImage,
     },
     {
       title: "Chat Room",
@@ -88,14 +77,6 @@ const Projects = () => {
       gitHubRepo: "https://github.com/dipankar049/task-tracker-lite",
       imageUrl: taskTrackerLiteImage,
     },
-    // {
-    //   title: "Task Tracker App",
-    //   description: "A Flutter-based mobile app to manage daily tasks with features like task creation, editing, and local storage using sqflite.",
-    //   tech: ["Flutter", "Dart", "sqflite"],
-    //   gitHubRepo: "https://github.com/dipankar049/TaskTrackr",
-    //   imageUrl: TaskTrackerImage,
-    //   downloadAPK: "https://drive.google.com/uc?export=download&id=1vPsnV1c7Qe1yRrCBWU-HrLeQrTZXrUCF"
-    // }
   ];
 
   return (
@@ -111,7 +92,7 @@ const Projects = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="flex flex-wrap justify-center gap-8"
       >
         {projects.map((project, index) => (
           <motion.div
@@ -127,6 +108,7 @@ const Projects = () => {
               }
             }}
             className="
+              w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]
               cursor-pointer
               bg-white/5
               border border-white/10
@@ -141,18 +123,18 @@ const Projects = () => {
 
             {/* Image */}
             <div className="relative overflow-hidden rounded-xl group">
-              {project.downloadAPK && (
+              {project.isMobileApp && (
                 <div className="absolute top-2 right-2 z-10 flex items-center gap-1.5 px-2 py-1 bg-indigo-500/20 backdrop-blur-md border border-indigo-400/30 rounded-lg shadow-lg">
                   <Smartphone size={12} className="text-indigo-400" />
                   <span className="text-[10px] font-bold text-indigo-300 tracking-wider uppercase">
-                    Android APK
+                    Android App
                   </span>
                 </div>
               )}
               <motion.img
                 src={project.imageUrl}
                 alt={project.title}
-                className="w-full h-40 object-cover"
+                className="w-full h-52 object-cover"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               />
@@ -233,20 +215,20 @@ const Projects = () => {
 
                 ) : (
 
-                  <span
-                    className="
-                      px-4 py-2
-                      border border-white/60
-                      text-white
-                      rounded-lg
-                      backdrop-blur-md
-                      text-sm
-                      font-medium
-                    "
-                  >
-                    View Project →
-                  </span>
-                )}
+                <span
+                  className="
+                    px-4 py-2
+                    border border-white/60
+                    text-white
+                    rounded-lg
+                    backdrop-blur-md
+                    text-sm
+                    font-medium
+                  "
+                >
+                  {project.isMobileApp ? "Install App →" : "View Project →"}
+                </span>
+              )}
               </div>
 
               {/* Mobile Badge */}
@@ -297,7 +279,7 @@ const Projects = () => {
                     backdrop-blur-md
                   "
                 >
-                  Tap to View →
+                  {project.isMobileApp ? "Tap to Install →" : "Tap to View →"}
                 </div>
               )}
               {/* <div className="

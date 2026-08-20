@@ -59,7 +59,7 @@ const Home = () => {
             </motion.h1>
 
             <motion.p variants={item} className="text-xl sm:text-2xl mb-2">
-              B.Tech in Computer Science | MERN Stack Developer
+              React Native Developer | MERN Stack Developer
             </motion.p>
 
             <motion.p variants={item} className="text-md sm:text-lg text-gray-300 mb-6">

@@ -76,10 +76,11 @@ const About = () => {
 
             <br /><br />
 
-            I have worked on live production projects using{" "}
+            I have worked on live production applications using{" "}
             <span className="text-indigo-400">
-              React, React Native, Node.js, and MongoDB
-            </span>, where I developed real-time features, backend APIs, and automated processes. I enjoy improving existing systems, fixing bugs, and building scalable solutions.
+              React, React Native, Next.js, Node.js, and NestJS
+            </span>
+            , building features across mobile apps, admin panels, and backend services — including push notifications, background services, payment integrations, and webhooks.
 
             <br /><br />
 
